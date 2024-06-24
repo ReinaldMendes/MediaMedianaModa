@@ -1,16 +1,16 @@
-let arrayQualquer = [10.0, 9.0, 9.5, 8.0, 7.3, 7.8, 8.0];
+let notas = [10.0, 9.0, 9.5, 8.0, 7.3, 7.8, 8.0];
 let notasOrdem = [];
-for (let i = 0; i < arrayQualquer.length; i++) {
-  for (let j = i + 1; j < arrayQualquer.length; j++) {
-    if (arrayQualquer[i] > arrayQualquer[j]) {
-      let aux = arrayQualquer[i];
-      arrayQualquer[i] = arrayQualquer[j];
-      arrayQualquer[j] = aux;
+for (let i = 0; i < notas.length; i++) {
+  for (let j = i + 1; j < notas.length; j++) {
+    if (notas [i] > notas[j]) {
+      let aux = notas[i];
+       notas[i] = notas[j];
+        notas[j] = aux;
     }
   }
 }
-console.log(arrayQualquer);
-notasOrdem.push(arrayQualquer);
+console.log(notas);
+notasOrdem.push(notas);
 console.log(notasOrdem);
 for (let y = 0; y < notasOrdem.length; y++) {
   if (y == 0) {
