@@ -1,15 +1,23 @@
 
+let notas = [10, 9.0, 9.5, 7.3, 7.8, 8.0];
+let resultado = 0;
+for (let i = 0; i < notas.length; i++) {
+  resultado = resultado + notas[i];
+}
+console.log(resultado / notas.length);
 
-let notas = [10.0, 9.0, 9.5, 8.0, 7.3, 7.8, 8.0];
+//media
+
+
 let frequencia = {};
 let moda = [];
 let maxFrequencia = 0;
 
-for (let i = 0; i < numeros.length; i++) {
-  if (frequencia[numeros[i]] === undefined) {
-    frequencia[numeros[i]] = 1; // verifica se o numero ja esta na frequencia
+for (let i = 0; i < notas.length; i++) {
+  if (frequencia[notas[i]] === undefined) {
+    frequencia[notas[i]] = 1; // verifica se o numero ja esta na frequencia
   } else {
-    frequencia[numeros[i]]++; // se ja estiver soma ++
+    frequencia[notas[i]]++; // se ja estiver soma ++
   }
 }
 
@@ -23,6 +31,7 @@ for (let numero in frequencia) {
 }
 
 console.log("Moda:", moda);
+//moda
 
 let notasOrdem = [];
 for (let i = 0; i < notas.length; i++) {
@@ -55,3 +64,4 @@ for (let y = 0; y < notasOrdem.length; y++) {
   }
 }
 
+//mediana
