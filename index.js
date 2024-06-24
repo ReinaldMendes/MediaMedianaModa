@@ -19,7 +19,9 @@ for (let y = 0; y < notasOrdem.length; y++) {
     posicao = posicao % 2 == 0;
 
     if (posicao === true) {
-      let calculo = (notasOrdem[y][2] + notasOrdem[y][3]) / 2;
+      let calculo0 = notasOrdem[y].length /2
+      let calculo2=  calculo -1;
+      let calculo=calculo0+calculo1/2
       console.log(calculo);
     } else if (posicao == false) {
       let medianaImpar = notasOrdem[y][3];
