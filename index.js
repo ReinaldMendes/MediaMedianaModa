@@ -1,4 +1,6 @@
-let numeros = [4, 3, 1, 4, 5, 5, 7, 2, 7, 2001, 7];
+
+
+let notas = [10.0, 9.0, 9.5, 8.0, 7.3, 7.8, 8.0];
 let frequencia = {};
 let moda = [];
 let maxFrequencia = 0;
@@ -21,3 +23,35 @@ for (let numero in frequencia) {
 }
 
 console.log("Moda:", moda);
+
+let notasOrdem = [];
+for (let i = 0; i < notas.length; i++) {
+  for (let j = i + 1; j < notas.length; j++) {
+    if (notas [i] > notas[j]) {
+      let aux = notas[i];
+       notas[i] = notas[j];
+        notas[j] = aux;
+    }
+  }
+}
+console.log(notas);
+notasOrdem.push(notas);
+console.log(notasOrdem);
+for (let y = 0; y < notasOrdem.length; y++) {
+  if (y == 0) {
+    let posicao = notasOrdem[y].length;
+
+    posicao = posicao % 2 == 0;
+
+    if (posicao === true) {
+      let calculo0 = notasOrdem[y].length /2
+      let calculo2=  calculo -1;
+      let calculo=notasOrdem[calculo0]+notasOrdem[calculo1]/2
+      console.log(calculo);
+    } else if (posicao == false) {
+      let medianaImpar = notasOrdem[y][3];
+      console.log(medianaImpar);
+    }
+  }
+}
+
