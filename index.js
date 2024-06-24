@@ -1,4 +1,29 @@
+
+
 let notas = [10.0, 9.0, 9.5, 8.0, 7.3, 7.8, 8.0];
+let frequencia = {};
+let moda = [];
+let maxFrequencia = 0;
+
+for (let i = 0; i < numeros.length; i++) {
+  if (frequencia[numeros[i]] === undefined) {
+    frequencia[numeros[i]] = 1; // verifica se o numero ja esta na frequencia
+  } else {
+    frequencia[numeros[i]]++; // se ja estiver soma ++
+  }
+}
+
+for (let numero in frequencia) {
+  if (frequencia[numero] > maxFrequencia) {
+    moda = [numero];
+    maxFrequencia = frequencia[numero];
+  } else if (frequencia[numero] === maxFrequencia) {
+    moda.push(numero);
+  }
+}
+
+console.log("Moda:", moda);
+
 let notasOrdem = [];
 for (let i = 0; i < notas.length; i++) {
   for (let j = i + 1; j < notas.length; j++) {
@@ -29,3 +54,4 @@ for (let y = 0; y < notasOrdem.length; y++) {
     }
   }
 }
+
